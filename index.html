@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parra</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="#" class="acive">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+            <img src="pic/bird1.png" id="bird1">
+            <img src="pic/bird2.png" id="bird2">
+            <img src="pic/forest.png" id="forest">
+            <a href="#" id="btn">Explore</a>
+            <img src="pic/rocks.png" id="rocks">
+            <img src="pic/water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Notre organisation et ses partenaires stockent et/ou accèdent à des informations sur votre appareil, telles que les identifiants uniques de cookies pour traiter les données personnelles.<br><br> Vous pouvez accepter ou gérer vos choix en cliquant ci-dessous, y compris votre droit d’opposition en cas d’utilisation d’un intérêt légitime, ou à tout moment sur la page de politique de confidentialité. Ces préférences seront signalées à nos partenaires et n’affecteront pas les données de navigation.
+                Comment sont utilisées vos données ? <br><br>
+                Analyser activement les caractéristiques du terminal pour l’identification. Utiliser des données de géolocalisation précises. Sélectionner des publicités personnalisées. Mesurer la performance des publicités/annonces publicitaires. Créer un profil personnalisé de publicités. Mesurer la performance du contenu. Développer et améliorer les produits. Stocker et/ou accéder à des informations stockées sur un terminal. Sélectionner du contenu personnalisé. Sélectionner des publicités standard. Créer un profil pour afficher un contenu personnalisé. Exploiter des études de marché afin de générer des données d’audience.
+                Site développé par les équipes internes de Larousse et hébergé en Europe.</p>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * -0.5 + 'px';
+
+            })
+        </script>
+    </body>
+</html>
